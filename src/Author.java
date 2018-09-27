@@ -6,7 +6,6 @@ import java.util.List;
 
 public class Author extends Person {
     private List books;
-
     public Author(String firstName, String lastName) {
         super(firstName, lastName);
         books = new ArrayList();
@@ -28,7 +27,7 @@ public class Author extends Person {
         books.add(book);
     }
 
-    @Override
+//    @Override
     public String sortName() {
         return String.format("%s, %s", lastName, firstName);
     }
