@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Author extends Person {
+    @SuppressWarnings("unchecked")
     private List books;
     public Author(String firstName, String lastName) {
         super(firstName, lastName);
@@ -14,15 +15,15 @@ public class Author extends Person {
     /**
      * @deprecated Use publishedBooks instead
      */
-    @Deprecated
+    @Deprecated @SuppressWarnings("unchecked")
     public List<String> getBooks() {
         return books;
     }
-
+    @SuppressWarnings("unchecked")
     public List<String> publishedBooks() {
         return books;
     }
-
+    @SuppressWarnings("unchecked")
     public void addBook(String book) {
         books.add(book);
     }
